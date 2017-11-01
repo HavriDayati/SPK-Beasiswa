@@ -38,6 +38,11 @@ class Anggota extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+
+            ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute} Sudah Ada'],
+            ['password_konfirmasi', 'validatePassword'],
+            [['nama'],'unique','message' => '{attribute} Pengguna Sudah Ada'],
+            [['nama', 'alamat', 'id_jenis_kelamin', 'email', 'tanggal_lahir','username','password','password_konfirmasi'], 'required','message' => '{attribute} Tidak Boleh Kosong'],
             [['nama', 'alamat', 'photo', 'id_jenis_kelamin', 'email', 'tgl_lhr', 'username', 'password','password_konfirmasi'], 'required'],
             [['id', 'id_jenis_kelamin'], 'integer'],
             [['alamat'], 'string'],

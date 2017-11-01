@@ -3,19 +3,22 @@
 use yii\helpers\Html;
 use yii\helpers\Url; 
 use app\models\User;
+use app\models\Mahasiswa;
+use app\models\Anggota;
+use app\models\Jurusan;
 
 $this->title = "Halaman Dashboard";
 
 ?>
 
-<!-- <div class="row">
-	<div class="col-lg-3 col-xs-6">
+<div class="row">
+	<div class="col-lg-4 col-xs-6">
 
 		<div class="small-box bg-green">
 			<div class="inner">
-				<p>Pelayanan Diterima</p>
+				<p>Jumlah Pendaftar Beasiswa</p>
 
-				<h3>90 <sup class="small-box-sup">Pelayanan</sup></h3>
+				<h3>50 <sup class="small-box-sup">Mahasiswa</sup></h3>
 			</div>
 			<div class="icon">
 				<i class="fa fa-check-square-o"></i>
@@ -24,13 +27,13 @@ $this->title = "Halaman Dashboard";
 		</div>
 	</div>
 
-	<div class="col-lg-3 col-xs-6">
+	<div class="col-lg-4 col-xs-6">
 
 		<div class="small-box bg-red">
 			<div class="inner">
-				<p>Pelayanan Ditolak</p>
+				<p>Jumlah Penerima Beasiswa</p>
 				
-				<h3>90 <sup class="small-box-sup">Pelayanan</sup></h3>
+				<h3>20 <sup class="small-box-sup">Penerima Beasiswa</sup></h3>
 			</div>
 			<div class="icon">
 				<i class="fa fa-remove"></i>
@@ -39,33 +42,19 @@ $this->title = "Halaman Dashboard";
 		</div>
 	</div>
 
-	<div class="col-lg-3 col-xs-6">
+	<div class="col-lg-4 col-xs-6">
 
 		<div class="small-box bg-aqua">
 			<div class="inner">
-				<p>Menunggu Diproses</p>
+				<p>Jumlah Jurusan</p>
 				
-				<h3>90 <sup class="small-box-sup">Pelayanan</sup></h3>
+				<h3>05 <sup class="small-box-sup">Jurusan</sup></h3>
 			</div>
 			<div class="icon">
-				<i class="fa fa-refresh"></i>
+				<i class="fa fa-graduation-cap"></i>
 			</div>
 			<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
 		</div>
 	</div>
 
-	<div class="col-lg-3 col-xs-6">
-
-		<div class="small-box bg-purple">
-			<div class="inner">
-				<p>Dalam Proses</p>
-				
-				<h3>90 <sup class="small-box-sup">Pelayanan</sup></h3>
-			</div>
-			<div class="icon">
-				<i class="fa fa-clock-o"></i>
-			</div>
-			<a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
-		</div>
-	</div>
-</div> -->
+</div>

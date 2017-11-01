@@ -45,21 +45,15 @@
                     ['label' => 'Anggota', 'icon' => 'user', 'url' => ['anggota/index']],
                     ['label' => 'MENU LAINNYA', 'options' => ['class' => 'header']],
                     
-                    [
-                        'label' => 'Pengaturan',
-                        'icon' => 'wrench',
-                        'url' => '#',
-                        'items' => [
-                            ['label' => 'Jurusan', 'icon' => 'graduation-cap', 'url' => ['jurusan/index'],],
-                            ['label' => 'Jenis Kelamin', 'icon' => 'intersex ', 'url' => ['jenis-kelamin/index'],],
-                            ['label' => 'Semester', 'icon' => 'dashboard', 'url' => ['semester/index'],],
-                            ['label' => 'User', 'icon' => 'user', 'url' => ['/user'],],
-                            ['label' => 'Logout', 'url' => ['site/logout'], 'template' => '<a href="{url}" data-methode="post">{icon} {label}</a>', 'visible' => ! Yii::$app->user->isGuest],
-
+                    ['label' => 'Jurusan', 'icon' => 'graduation-cap', 'url' => ['jurusan/index'],],
+                    ['label' => 'Jenis Kelamin', 'icon' => 'intersex ', 'url' => ['jenis-kelamin/index'],],
+                    ['label' => 'Semester', 'icon' => 'dashboard', 'url' => ['semester/index'],],
+                    ['label' => 'User', 'icon' => 'user', 'url' => ['/user'],],
+                    ['label' => 'Logout', 'url' => ['site/logout'], 'template' => '<a href="{url}" data-methode="post">{icon} {label}</a>', 'visible' => ! Yii::$app->user->isGuest],
                         
                         ],
-                    ],
-                ],
+                    
+    
             ]
         ) ?>
 
