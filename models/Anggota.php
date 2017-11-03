@@ -39,15 +39,17 @@ class Anggota extends \yii\db\ActiveRecord
     {
         return [
 
-            ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute} Sudah Ada'],
+             ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute} Sudah Ada'],
             ['password_konfirmasi', 'validatePassword'],
             [['nama'],'unique','message' => '{attribute} Pengguna Sudah Ada'],
-            [['nama', 'alamat', 'id_jenis_kelamin', 'email', 'tanggal_lahir','username','password','password_konfirmasi'], 'required','message' => '{attribute} Tidak Boleh Kosong'],
-            [['nama', 'alamat', 'photo', 'id_jenis_kelamin', 'email', 'tgl_lhr', 'username', 'password','password_konfirmasi'], 'required'],
-            [['id', 'id_jenis_kelamin'], 'integer'],
+            [['nama', 'alamat', 'id_jenis_kelamin', 'email', 'tgl_lhr','username','password','password_konfirmasi'], 'required','message' => '{attribute} Tidak Boleh Kosong'],
             [['alamat'], 'string'],
-            [['tgl_lhr'], 'safe'],
-            [['nama', 'photo', 'email'], 'string', 'max' => 255],
+            [['id_jenis_kelamin'], 'integer'],
+            [['photo'], 'safe'],
+            [['nama', 'email','photo'], 'string', 'max' => 255],
+            [['email'],'email'],
+            [['photo'], 'string', 'max' => 255],
+            ['photo', 'file', 'extensions' => ['png', 'jpg', 'jpeg', 'gif'], 'maxSize' => 1024 * 1024 * 2],
         ];
     }
 
